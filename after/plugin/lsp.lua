@@ -32,6 +32,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- These are just examples. Replace them with the language
 -- servers you have installed in your system
 require('lspconfig').ts_ls.setup({})
+require('lspconfig').phpactor.setup({})
+require('lspconfig').tailwindcss.setup({})
+require('lspconfig').vuels.setup({})
+
 
 local cmp = require('cmp')
 
