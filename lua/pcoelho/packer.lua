@@ -25,4 +25,9 @@ return require('packer').startup(function(use)
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
 	use({'tpope/vim-fugitive'})
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use({'tpope/vim-surround'})
 end)

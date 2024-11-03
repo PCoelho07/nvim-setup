@@ -35,7 +35,7 @@ require('lspconfig').ts_ls.setup({})
 require('lspconfig').phpactor.setup({})
 require('lspconfig').tailwindcss.setup({})
 require('lspconfig').vuels.setup({})
-
+require('lspconfig').css_variables.setup({})
 
 local cmp = require('cmp')
 
