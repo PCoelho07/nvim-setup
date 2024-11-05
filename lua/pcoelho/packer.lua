@@ -18,6 +18,11 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 	use('mbbill/undotree')
 	use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
