@@ -35,4 +35,5 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use({'tpope/vim-surround'})
+    use({'lewis6991/gitsigns.nvim'})
 end)
