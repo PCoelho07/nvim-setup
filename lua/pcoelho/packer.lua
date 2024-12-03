@@ -36,4 +36,8 @@ return require('packer').startup(function(use)
     }
     use({'tpope/vim-surround'})
     use({'lewis6991/gitsigns.nvim'})
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+    }
 end)

@@ -29,14 +29,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>vca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   end,
 })
--- These are just examples. Replace them with the language
--- servers you have installed in your system
-require('lspconfig').ts_ls.setup({})
-require('lspconfig').phpactor.setup({})
-require('lspconfig').tailwindcss.setup({})
-require('lspconfig').vuels.setup({})
-require('lspconfig').css_variables.setup({})
-require('lspconfig').gopls.setup({})
+
+require("mason").setup()
+require("mason-lspconfig").setup()
+local lspconfig = require('lspconfig')
+
+lspconfig.ts_ls.setup({})
+lspconfig.phpactor.setup({})
+lspconfig.tailwindcss.setup({})
+lspconfig.vuels.setup({})
+lspconfig.css_variables.setup({})
+lspconfig.gopls.setup({})
 
 local cmp = require('cmp')
 
@@ -52,8 +55,8 @@ cmp.setup({
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-                ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-                ["<C-Space>"] = cmp.mapping.complete(),
+        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+        ["<C-Space>"] = cmp.mapping.complete(),
 	}),
 })
