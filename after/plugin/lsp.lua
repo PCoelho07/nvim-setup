@@ -35,11 +35,8 @@ require("mason-lspconfig").setup()
 local lspconfig = require('lspconfig')
 
 lspconfig.ts_ls.setup({})
-lspconfig.phpactor.setup({})
-lspconfig.tailwindcss.setup({})
 lspconfig.vuels.setup({})
 lspconfig.css_variables.setup({})
-lspconfig.gopls.setup({})
 
 local cmp = require('cmp')
 
