@@ -35,7 +35,6 @@ require("mason-lspconfig").setup()
 local lspconfig = require('lspconfig')
 
 lspconfig.ts_ls.setup({})
-lspconfig.vuels.setup({})
 lspconfig.css_variables.setup({})
 
 local cmp = require('cmp')
