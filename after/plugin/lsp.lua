@@ -31,8 +31,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+    automatic_enable = false, 
+})
 local lspconfig = require('lspconfig')
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
 
 lspconfig.ts_ls.setup({})
 lspconfig.phpactor.setup({})

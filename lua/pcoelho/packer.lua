@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
 	use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
 	use({'neovim/nvim-lspconfig'})
 	use({'hrsh7th/nvim-cmp'})
-	use({'hrsh7th/cmp-nvim-lsp'})
+	use({'hrsh7th/cmp-nvim-lsp', commit = 'a8912b88ce488f411177fc8aed358b04dc246d7b'})
 	use({'tpope/vim-fugitive'})
     use {
         'nvim-lualine/lualine.nvim',
@@ -39,5 +39,8 @@ return require('packer').startup(function(use)
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+    }
+    use {
+        "github/copilot.vim"
     }
 end)
